@@ -21,7 +21,7 @@ const Create = () => {
             body: JSON.stringify(blog)
         }).then(() => {
 
-            
+
             setTimeout(() => {
                 console.log('New blog added...');
                 setIsPending(false);
@@ -32,7 +32,7 @@ const Create = () => {
 
                 setTimeout(() => {
                     navigate('/');
-                }, 1000)
+                }, 500)
 
 
             },1000)
