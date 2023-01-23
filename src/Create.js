@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { useNavigate  } from 'react-router-dom';
 
 const Create = () => {
 
@@ -6,6 +7,7 @@ const Create = () => {
     const [body, setBody] = useState('');
     const [author, setAuthor] = useState('mario');
     const [isPending, setIsPending] = useState(false);
+    const navigate  = useNavigate();
 
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -18,12 +20,21 @@ const Create = () => {
             headers: { 'Content-Type': 'application/json'},
             body: JSON.stringify(blog)
         }).then(() => {
+
+            
             setTimeout(() => {
                 console.log('New blog added...');
                 setIsPending(false);
                 setTitle('');
                 setBody('');
                 setAuthor('mario');
+
+
+                setTimeout(() => {
+                    navigate('/');
+                }, 1000)
+
+
             },1000)
         })
     }
