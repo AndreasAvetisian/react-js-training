@@ -58,3 +58,19 @@
   color: #f1356d;
   margin-bottom: 8px;
 }
+.blog-preview-content {
+  display: flex;
+  justify-content: space-between;
+}
+.deleteBlog {
+  color: white;
+  background-color: #f1356d;
+  border-radius: 8px;
+  padding: 5px 10px;
+  border: 0;
+}
+.deleteBlog:hover {
+  color: white;
+  background-color: #ff0000;
+  box-shadow: 1px 5px 8px rgba(0,0,0,0.1);
+}
