@@ -145,3 +145,8 @@
   border-radius: 8px;
   cursor: pointer;
 }
+
+/* not found */
+.not-found-content {
+  margin-bottom: 50px;
+}
